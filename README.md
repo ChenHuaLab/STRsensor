@@ -11,8 +11,6 @@ __AUTHOR: xiaolong zhang__<br>
 __EMAIL: xiaolongzhang2015@163.com__<br>
 __DATE:   2020-10-28__<br>
 __UPDATE: 2021-01-08__<br>
-__DEPENDENCE__<br>
-* __GNU make and gcc__<br>
 
 
 
