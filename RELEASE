@@ -1,0 +1,88 @@
+*******************************************************
+*              STRsensor RELEASE HISTORY              *
+*              Author: xiaolong zhang                 *
+*              Email: xiaolongzhang2015@163.com       *
+*******************************************************
+
+
+==================== Version 1.0.0 ====================
+
+Version 1.0.0
+Date:    2020-10-28
+Author:  xiaolong zhang
+Email:   xiaolongzhang2015@163.com
+Summary:
+    Reconstructing STRsensor with C language
+
+Details:
+    First C version of STRsensor
+
+
+==================== Version 1.1.0 ====================
+
+Version 1.1.0
+Date:    2021-01-03
+Author:  xiaolong zhang
+Email:   xiaolongzhang2015@163.com
+Summary:
+    Remove the 'kmer-based' algorithm
+
+Details:
+    (1) cigar.c/locate_index
+        process the cigar of deletion before STR region
+        eg.
+            17M1D26M4D227M130S --> (0, 17), (2, 1), (0, 26), (2, 4), (0, 227), (4, 130)
+
+    (2) cigar.c/match_check
+        add parameters of 'mis_match'
+
+    (3) cigar.h/MIN_MATCH
+        change the value from 6 to 8
+
+
+==================== Version 1.1.1 ====================
+
+Version 1.1.1
+Date:    2021-01-05
+Author:  xiaolong zhang
+Email:   xiaolongzhang2015@163.com
+Summary:
+    Fix the BUG induced by special cigar value
+    Change the indel shift algorithm
+
+Details:
+    (1) cigar.c/cigar_shift
+        simplify the process of the cigar shift before and after the STR region
+            1.1) indel_len % motif_len == 0
+            1.2) indel_start < region_start && indel_start > region_start - saft_dist
+            1.3) indel_end > region_end && indel_end < region_end + safe_dist
+            
+    (2) cigar.c/locate_index
+        check the left and right cigar length of the target indel cigar
+        eg. cigar -> 120S 78M 20I 1M 14D 3M 2D 178M
+                               |
+                          target cigar
+
+            assume: shift_bp=10
+
+        2.1) left:   78 + shift_bp = 88M  (OK)
+             right:  1 - shift_bp = -9M   (NO)
+
+             Result: discard this complex alignment
+
+
+==================== Version 1.2.0 ====================
+
+Version 1.2.0
+Date:    2021-01-08
+Author:  xiaolong zhang
+Email:   xiaolongzhang2015@163.com
+Summary:
+    Add 'Kmer-based' matching algorithm to make up the shortcomings of 'Cigar-based' algorithm
+
+Details:
+    (1) main.c/locus_process_core
+        add 'kmer_allele' function to extract the allele if 'Cigar-based' algorithm fails
+
+    (2) cigar.c/cigar_shift
+        change the safe_dist from 3*motif_len to 2*motif_len to increase the accuracy
