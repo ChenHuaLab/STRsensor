@@ -86,3 +86,16 @@ Details:
 
     (2) cigar.c/cigar_shift
         change the safe_dist from 3*motif_len to 2*motif_len to increase the accuracy
+
+
+==================== Version 1.2.1 ====================
+Version 1.2.1
+Date:    2023-12-29
+Author:  xiaolong zhang
+Email:   xiaolongzhang2015@163.com
+Summary:
+    Made some very small changes
+
+Details:
+    (1) add the version info into the code itself
+    (2) add the Open Source License Agreement of GPL-3

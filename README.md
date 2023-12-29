@@ -4,13 +4,15 @@ STR allele-typing with both WGS dataset and multiplex deep sequencing dataset.
 
 
 __PROGRAM: STRsensor__<br>
-__VERSION: 1.2.0__<br>
+__VERSION: 1.2.1__<br>
 __PLATFORM: Linux__<br>
 __COMPILER: gcc-4.8.5__<br>
 __AUTHOR: xiaolong zhang__<br>
 __EMAIL: xiaolongzhang2015@163.com__<br>
 __DATE:   2020-10-28__<br>
-__UPDATE: 2021-01-08__<br>
+__UPDATE: 2023-12-29__<br>
+__DEPENDENCE__<br>
+* __GNU make and gcc__<br>
 
 
 

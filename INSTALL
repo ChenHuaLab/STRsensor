@@ -1,0 +1,35 @@
+                        Building STRsensor (v1)
+                    ===============================
+
+Note
+============
+STRsensor (v1) is specially designed for Linux system and it is an 
+executable file that can be used directly on Linux platform (e.g. Centos, Ubuntu).
+
+
+Requirements
+============
+
+Building STRsensor requires the following programs:
+
+    GNU make
+    C compiler (e.g. gcc or clang)
+
+
+Building
+============
+
+You can compile STRsensor by following the two steps:
+
+1) compile the htslib (v1.9)
+
+    cd STRsensor/htslib
+    ./configure --disable-bz2 --disable-lzma --disable-libcurl
+    make
+
+2) compile the STRsensor (v1)
+    cd STRsensor
+    make
+
+The there will generate an executable file of STRsensor
+
