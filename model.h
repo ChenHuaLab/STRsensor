@@ -179,17 +179,17 @@ typedef struct allele_t {
 
 static int _allele_descend(const void *a, const void *b) {
     /* sorted by descending order */
-    return ((cal1_t*)b)->nf - ((cal1_t*)a)->nf;
+    return (((cal1_t*)a)->nf < ((cal1_t*)b)->nf) - (((cal1_t*)a)->nf > ((cal1_t*)b)->nf);
 }
 
 static int _candidate_ascend(const void *a, const void *b) {
     /* sorted by descending order */
-    return ((cal1_t*)a)->allele - ((cal1_t*)b)->allele;
+    return (((cal1_t*)b)->allele < ((cal1_t*)a)->allele) - (((cal1_t*)b)->allele > ((cal1_t*)a)->allele);
 }
 
 static int _prob_descend(const void *a, const void *b) {
     /* sorte the probability by descending order */
-    return ((allele1_t*)b)->prob - ((allele1_t*)a)->prob;
+    return (((allele1_t*)a)->prob < ((allele1_t*)b)->prob) - (((allele1_t*)a)->prob > ((allele1_t*)b)->prob);
 }
 
 
