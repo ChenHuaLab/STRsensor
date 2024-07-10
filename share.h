@@ -18,9 +18,9 @@
 #include <math.h>
 #include "index.h"
 
-#define __STRSENSOR_VERSION__ "1.2.1"
+#define __STRSENSOR_VERSION__ "1.2.2"
 #define __STRSENSOR_CREATE_DATE__ "2020-10-28"
-#define __STRSENSOR_UPDATE_DATE__ "2023-12-29"
+#define __STRSENSOR_UPDATE_DATE__ "2024-07-10"
 
 
 /*! @typedef arg_t
