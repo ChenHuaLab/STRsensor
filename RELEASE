@@ -99,3 +99,17 @@ Summary:
 Details:
     (1) add the version info into the code itself
     (2) add the Open Source License Agreement of GPL-3
+
+
+==================== Version 1.2.2 ====================
+Version 1.2.2
+Date:    2024-07-08
+Author:  xiaolong zhang
+Email:   xiaolongzhang2015@163.com
+Summary:
+    MAP sorting results are sometimes inaccurate due to floating point sorting by qsort
+
+Details:
+    (1) modify the way to compare two float numbers for sorting with qsort, which was
+        fixed in model.h/_allele_descend, model.h/_candidate_ascend and model.h/_prob_descend
+        
