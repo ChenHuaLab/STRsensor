@@ -242,3 +242,7 @@ e.g.<br>
             6. SpanReads: the number of reads that fully span the entire STR region
             7. AlleleList: extracted allele and its corresponding number 
 
+Citation
+=========================
+Please cite the following article if you find STRsensor is useful to you:
+* Xiaolong Zhang, Xianchao Ji, Lingxiang Wang, Lianjiang Chi, Chengtao Li, Shaoqing Wen, Hua Chen, STRsensor: a computationally efficient method for STR allele-typing from massively parallel sequencing data, Briefings in Bioinformatics, Volume 26, Issue 1, January 2025, bbae637, https://doi.org/10.1093/bib/bbae637
