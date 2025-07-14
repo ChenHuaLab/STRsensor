@@ -112,4 +112,16 @@ Summary:
 Details:
     (1) modify the way to compare two float numbers for sorting with qsort, which was
         fixed in model.h/_allele_descend, model.h/_candidate_ascend and model.h/_prob_descend
-        
+
+
+==================== Version 1.2.3 ====================
+Version 1.2.3
+Date:    2024-07-13
+Author:  xiaolong zhang
+Email:   xiaolongzhang2015@163.com
+Summary:
+    Failed to locate alleles due to the presence of lowercase letters (a,t,g,c) in the
+    flanking sequence that obtained from reference
+
+Details:
+    (1) getseq.c/get_seq: convert lowercase letters to uppercase when extracting flanking sequences
